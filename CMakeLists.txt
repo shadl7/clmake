@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.24)
+project(clmake)
+set(SOURCE_EXE src/main.cpp)
+file(GLOB lib_src CONFIGURE_DEPENDS "lib/*.cpp")
+add_library(lib STATIC ${lib_src})
+add_executable(main ${SOURCE_EXE})
+target_link_libraries(main LINK_PUBLIC lib)
