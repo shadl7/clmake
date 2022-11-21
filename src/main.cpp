@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
-#include <iostream>
-using namespace std;
-main() {
-    cout << "Hello, world!" << endl;
+#include "../lib/application.hpp"
+int main() {
+    Application app;
+	app.run();
+	return 0;
 }
