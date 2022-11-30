@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
-#include "../lib/application.hpp"
+#include "application.hpp"
 int main() {
     Application app;
 	app.run();

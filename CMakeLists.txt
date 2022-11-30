@@ -1,7 +1,10 @@
+# SPDX-License-Identifier: GPL-3.0-only
 cmake_minimum_required(VERSION 3.24)
 project(clmake)
 set(SOURCE_EXE src/main.cpp)
 file(GLOB lib_src CONFIGURE_DEPENDS "lib/*.cpp")
 add_library(lib STATIC ${lib_src})
+target_include_directories(lib PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/clmake-api/include/api>)
 add_executable(main ${SOURCE_EXE})
+target_include_directories(main PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/clmake-api/include/api>)
 target_link_libraries(main LINK_PUBLIC lib)

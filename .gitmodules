@@ -1,0 +1,3 @@
+[submodule "clmake-api"]
+	path = clmake-api
+	url = https://github.com/shadl7/clmake-api
